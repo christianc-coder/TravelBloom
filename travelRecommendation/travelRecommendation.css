@@ -1,7 +1,253 @@
-body{
+body {
     margin: 0px;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: rgb(12, 95, 71);
+    height: 60px;
+}
+header button{
+    width: 65px;
+    background-color: green;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.div_encabezado {
+    display: flex;
+    font-size: 15px;
+    padding-left: 20px;
+    color: aliceblue;
+    gap: 20px;
+}
+
+.div_encabezado h1 {
+    text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.div_encabezado img {
+    width: 60px;
+    height: 57px;
+    border-radius: 20px;
+    margin-top: 9px;
+}
+.nav_botones{
+    display: flex;
+    gap: 20px;
+}
+
+.nav_botones a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial ;
+   
+
+}
+
+.div_busqueda {
+
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    margin-right: 50px;
+    border-radius: 50px;
+}
+
+.div_busqueda button {
+    position: relative;
+    left: 50px;
+}
+
+#search {
+    height: 40px;
+    margin-left: 20px;
+    border: none;
+}
+
+
+.div_RedesSociales img {
+    width: 38px;
+    height: 38px;
+}
+
+.div_RedesSociales {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+
+}
+
+.section_reservacion {
+    background: url('img/ubicaciones-Img/rio.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    width: 100%;
+    position: relative;
+    
+
+}
+
+.div_mensaje_inicio {
+    height: 300px;
+    padding-top: 160px;
+    padding-left: 60px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.div_mensaje_inicio h2,
+.div_mensaje_inicio p {
+    color: aliceblue;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    font-family: Arial;
+
+}
+
+.div_mensaje_inicio h2 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.div_mensaje_inicio p {
+    line-height: 1.2;
+}
+.btn_reservar{
+    margin-left: 140px;
+    font-family: Helvetica;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(7, 127, 59);
+    color: rgb(232, 232, 232);
+            box-shadow: 1px 1px 4px black;
+
+
+}
+:hover.btn_reservar{
+    font-family: Helvetica;
+    
+    font-size: 18px;
+    padding: 10px;
+        border: 0px solid green;
+
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 150, 39);
+    cursor: pointer;
+            box-shadow: 1px 1px 4px black;
+
+}
+
+.div_resultado {
+    position: relative;
+    z-index: 10;
+    width: 500px;
+    height: auto;
+    max-height: 800px;
+
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    border-radius: 30px;
+    justify-self: center;
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 400px;
+    left: 600px;
+    margin-top: -70px;
+    display: grid;
+    gap: 15px;
+    transition: all 2s ease;
+    
+   
+    
+    background-color: rgba(248, 255, 255, 0);
+
+
+
+
+}
+
+.resultado {
+    opacity: 1;
+    background-color: rgb(248, 255, 255);
+    justify-self: center;
+    width: 400px;
+    height: 330px;
+
+    border-radius: 10px;
+    box-sizing: border-box;
+
+
+}
+.resultado img {
+    position: relative;
+    right: 0px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    
+
+}
+
+.resultado h3 {
+
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 19px;
+    color: rgb(50, 137, 139);
+}
+
+.resultado p {
+   padding-left: 20px;
+   padding-right: 20px;
+    margin-top: -30px;
+    text-shadow: none;
+    color: black;
+    
+   
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -19px;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(12, 95, 71);
+    color: aliceblue;
+    gap: 60xp;
+}
+.footer img{
+    width: 100px;
+    height: 100px;
+    
+    border-color: yellow;
+    border-radius:4ch;
+    border-top-left-radius: 4ch;
+}
+
+footer h2,
+footer p {
+    padding-top: 20px;
+
+}
+.div_img{
+    padding-top: 50px;
+    padding-right: 20px;
 }
