@@ -2,10 +2,10 @@
 function ObtenerDatos() {
     const input = document.getElementById('search').value.toLocaleLowerCase().trim();
 
-    fetch('travel_recommendation_api.json')
+    fetch('./travelRecommendation/travel_recommendation_api.json')
         .then(res => res.json())
-
         .then(data => {
+            console.log(data);
             filtrarDatos(data, input);
         })
         .catch((error) => {
@@ -46,7 +46,7 @@ function mostrarDatos(resultado) {
     const divResultado = document.getElementById('ctn_resultado');
     let html = '';
 
-    if (resultado) {
+    if (resultado.length > 0) {
         resultado.forEach(data => {
 
 
@@ -73,7 +73,7 @@ function mostrarDatos(resultado) {
 
 
     } else {
-        divResultado.textContent = 'Hubo un error en la obtencion en los datos';
+        divResultado.textContent = 'No se encontraron resultados para tu búsqueda.';
     }
 }
 
@@ -82,7 +82,7 @@ function BorrarHtml() {
     const divResultado = document.getElementById('ctn_resultado');
     divResultado.innerHTML = "";
     divResultado.style.transform = "translateY(0px)";
-    c
+    
 }
 const buscar = document.getElementById('btn_Buscar');
 buscar.addEventListener('click', ObtenerDatos);
