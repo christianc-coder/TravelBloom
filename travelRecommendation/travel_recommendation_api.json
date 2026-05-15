@@ -1,6 +1,10 @@
 {
   "countries": [
     {
+
+    "name": "country",
+    "paises":[
+    {
       "id": 1,
       "name": "Australia",
       "cities": [
@@ -46,9 +50,12 @@
           "imageUrl": "img/ubicaciones-Img/sao-paulo.jpg",
           "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
         }
-      ]
-    }
-  ],
+       ]
+      }
+    ]
+  }
+],
+
   "temples": [
     {
       "name": "Temples",
@@ -70,16 +77,21 @@
   ],
   "beaches": [
     {
-      "id": 1,
-      "name": "Bora Bora, French Polynesia",
-      "imageUrl": "img/ubicaciones-Img/playaBoraBora.jpg",
-      "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
-    },
-    {
-      "id": 2,
-      "name": "Copacabana Beach, Brazil",
-      "imageUrl": "img/ubicaciones-Img/playa.jpeg",
-      "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+      "name": "beaches",
+      "playa": [
+        {
+          "id": 1,
+          "name": "Bora Bora, French Polynesia",
+          "imageUrl": "img/ubicaciones-Img/playaBoraBora.jpg",
+          "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+        },
+        {
+          "id": 2,
+          "name": "Copacabana Beach, Brazil",
+          "imageUrl": "img/ubicaciones-Img/playa.jpeg",
+          "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        }
+      ]
     }
   ]
 }

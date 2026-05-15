@@ -16,22 +16,28 @@ function ObtenerDatos() {
 
 function filtrarDatos(data, input) {
     const resultado = [
-        //...data.countries.filter( 
 
-        // country => country.name.toLocaleLowerCase().includes(input)).flatMap(c => c.cities),
+        //Busca por "Paises" como busquesda General sacando los nombres de ciudad
+        ...data.countries.filter(grupos => grupos.name.toLocaleLowerCase().includes(input)).flatMap(g => g.paises).flatMap(pai => pai.cities),
+
         //Busca por nombres de ciudad
         ...data.countries.flatMap(
-            contry => contry.cities.filter(city => city.name.toLocaleLowerCase().includes(input))),
-
-        //  ...data.temples.filter( temp => temp.name.toLocaleLowerCase().includes(input)),
-        // Usa Temples como busqueda general para buscar templos
+            contry => contry.paises.flatMap(pai => pai.cities.filter(c => c.name.toLocaleLowerCase().includes(input)
+            )
+            )
+        ),
+        // Busca por "Templos" en General sacando todos los templos
         ...data.temples.filter(
             temp => temp.name.toLocaleLowerCase().includes(input)).flatMap(tem => tem.temple),
 
+
+        //Busca por "Beaches" como busqueda general..
         ...data.beaches.filter(
-            beach => beach.name.toLocaleLowerCase().includes(input)),
+            b => b.name.toLocaleLowerCase().includes(input)).flatMap(t => t.playa),
+
     ];
     mostrarDatos(resultado);
+
 }
 
 // paso las pruebas
@@ -53,17 +59,17 @@ function mostrarDatos(resultado) {
 
         });
 
-       divResultado.style.transform = 'translateY(0px)';
+        divResultado.style.transform = 'translateY(0px)';
 
         divResultado.innerHTML = html;
 
         divResultado.style.transform = 'translateY(60px)';
-       // divResultado.innerHTML = "";
+        // divResultado.innerHTML = "";
         //setTimeout(() => {
 
-          //  divResultado.innerHTML = html;
-          //  divResultado.classList.add('aparecer')
-       // }, 50);
+        //  divResultado.innerHTML = html;
+        //  divResultado.classList.add('aparecer')
+        // }, 50);
 
 
     } else {
@@ -72,9 +78,11 @@ function mostrarDatos(resultado) {
 }
 
 function BorrarHtml() {
+    const input = document.getElementById('search').value = "";
     const divResultado = document.getElementById('ctn_resultado');
     divResultado.innerHTML = "";
     divResultado.style.transform = "translateY(0px)";
+    c
 }
 const buscar = document.getElementById('btn_Buscar');
 buscar.addEventListener('click', ObtenerDatos);
